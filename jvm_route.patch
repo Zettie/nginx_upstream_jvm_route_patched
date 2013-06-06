@@ -82,6 +82,7 @@ diff -ruN src/http/ngx_http_upstream.h src-change/http/ngx_http_upstream.h
      ngx_uint_t                       line;
      in_port_t                        port;
      in_port_t                        default_port;
+     ngx_uint_t                       no_port;  /* unsigned no_port:1 */
 +    
 +    /* add for jvm_route */
 +    ngx_array_t                     *values;

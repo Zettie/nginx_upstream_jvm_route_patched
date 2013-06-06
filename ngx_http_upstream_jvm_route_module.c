@@ -16,6 +16,11 @@
 #include <ngx_core.h>
 #include <ngx_http.h>
 
+#if (NGX_UPSTREAM_CHECK_MODULE)
+#include "ngx_http_upstream_check_handler.h"
+#endif
+
+#define SHM_NAME_LEN 256
 
 typedef struct {
     /* the round robin data must be first */
